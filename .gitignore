@@ -64,3 +64,6 @@ crashlytics-build.properties
 # Large assets
 Assets/StarterAssets
 Assets/Waves
+
+# Document Files
+Document/
