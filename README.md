@@ -22,16 +22,19 @@ We use Unity's ***Mathf.PerlinNoise*** to sample from which helps in our noise m
 
 ### Levels
 It applies more detail to the noise map by combining different wave graphs. These levels are influenced by the diminishing strength and attenuation values.
+![NoiseLevel](https://user-images.githubusercontent.com/43366313/213860920-6524f887-b9da-46af-b520-06fee6617410.gif)
 
 ### Strength
 A factor that affects the amplitude of the waves of each level. It ranges between 1 to 0 and is halved for each level. This property gives a more diminishing detail for increasing levels.
 
 $amplitude_{level} = strength^{-2({level}-1)}$
+![NoiseStrength](https://user-images.githubusercontent.com/43366313/213861134-f3651783-21c6-41cf-9e73-70400b2803aa.gif)
 
 ### Attenuation
 A factor that affects the frequency of the waves of each level. It is halved for each level. This property helps increase the frequency with increasing levels giving more frequent detailing for finer waves.
 
 $frequency_{level} = attenuation^{2({level}-1)}$
+![NoiseAttenuation](https://user-images.githubusercontent.com/43366313/213861921-8d3e6f38-046f-4e18-818f-5b534acc1122.gif)
 
 ## Data
 Data is stored and used from the following class types:
@@ -50,6 +53,7 @@ The endless nature of terrain is achieved by generating meshes around the viewer
 
 ### [Terrain Chunk](Assets/Scripts/TerrainChunk.cs)
 Each mesh is treated as a terrain chunk instance which has the renderer, and collider component attached to it. It also holds various LOD meshes. These meshes are then assigned to its renderer and collider.
+![EndlessTerrain](https://user-images.githubusercontent.com/43366313/213862790-0af9eef5-a791-4152-94c5-8937a9b6cfa8.gif)
 
 ## References
 1. Sebastian Lague's [Procedural Terrain Generation](https://youtube.com/playlist?list=PLFt_AvWsXl0eBW2EiBtl_sxmDtSgZBxB3)
